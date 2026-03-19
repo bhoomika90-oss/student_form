@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Information Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0ebf8;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .container {
+      background: white;
+      width: 400px;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #673ab7;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .radio-group, .checkbox-group {
+      margin-bottom: 15px;
+    }
+
+    .radio-group input,
+    .checkbox-group input {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #673ab7;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #5a32a3;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>Student Information Form</h2>
+
+  <form>
+
+    <!-- Name -->
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your name" required>
+
+    <!-- DOB -->
+    <label>Date of Birth</label>
+    <input type="date" required>
+
+    <!-- Age -->
+    <label>Age</label>
+    <input type="number" min="18" max="30" placeholder="Enter age" required>
+
+    <!-- Gender -->
+    <label>Gender</label>
+    <div class="radio-group">
+      <input type="radio" name="gender"> Male
+      <input type="radio" name="gender"> Female
+      <input type="radio" name="gender"> Other
+    </div>
+
+    <!-- Skills -->
+    <label>Skills</label>
+    <div class="checkbox-group">
+      <input type="checkbox"> HTML
+      <input type="checkbox"> CSS
+      <input type="checkbox"> JavaScript
+      <input type="checkbox"> Java
+    </div>
+
+    <!-- Course -->
+    <label>Course</label>
+    <select required>
+      <option disabled selected>Select Course</option>
+      <option>BCA</option>
+      <option>BSc</option>
+      <option>BTech</option>
+      <option>Diploma</option>
+    </select>
+
+    <!-- Duration -->
+    <label>Internship Duration (Months)</label>
+    <input type="number" min="1" max="12" required>
+
+    <!-- Date -->
+    <label>Joining Date</label>
+    <input type="date" required>
+
+    <!-- Declaration -->
+    <div class="checkbox-group">
+      <input type="checkbox" required> I agree to the terms and conditions
+    </div>
+
+    <!-- Submit -->
+    <button type="submit">Submit</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
